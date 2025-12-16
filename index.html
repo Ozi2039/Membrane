@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Counter</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    #app { display: none; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<h1>Firebase User Counter</h1>
+
+<!-- Login Button -->
+<button id="loginButton">Login with Google</button>
+
+<!-- App Section -->
+<div id="app">
+  <p>Welcome, <span id="userName"></span>!</p>
+  <button id="countButton">Click Me</button>
+  <p>Count: <span id="count">0</span></p>
+  <button id="logoutButton">Logout</button>
+</div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<!-- App JS -->
+<script src="app.js"></script>
+
+</body>
+</html>
