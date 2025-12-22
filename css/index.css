@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --background-color: #121212;
+    --text-color: #E0E0E0;
+    --primary-color: #8A2BE2;
+    --secondary-color: #4A90E2;
+    --accent-color: #FFD700;
+    --container-bg: #1E1E1E;
+    --border-color: #333;
+    --font-family: 'Roboto Mono', monospace;
+}
+
+html, body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body {
+    padding: 0.5rem; /* Added general padding to the body */
+}
+
+main {
+    padding: 1rem; /* Reduced main padding for mobile */
+}
+
+header {
+    padding: 1rem; /* Adjusted header padding */
+}
+
+header h1 {
+    font-size: 1.2rem; /* Slightly smaller title */
+    margin-bottom: 0.5rem;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack navigation links */
+    margin-bottom: 0.5rem;
+}
+
+header nav a {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+header #auth-container {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+header #auth-container button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+header #auth-container span#userName {
+    font-size: 0.9rem;
+}
+
+.scrollBar {
+    height: 250px; /* Adjusted height for mobile */
+    width: auto; /* Allowed width to be fluid */
+    padding: 0.8rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+ul li {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.description {
+    font-size: 0.85rem;
+    padding-left: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Existing media query rules already handle header stacking and main padding */
+    /* Further granular adjustments for very small screens if necessary */
+    /* The general styles above now act as default mobile-first adjustments */
+}
