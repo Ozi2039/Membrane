@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membrane - Objectifs</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo">Membrane</h1>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Quick Taps</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="objectifs.html" class="active">Objectifs</a></li>
+                <li><a href="Project_Manager.html">Projets</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h3>Objectifs</h3>
+        <h4 id="dateEcheance_objectif">Date d'échéance</h4>
+        <div class="scrollBar">
+            <ul id="objectifs_list"></ul>
+        </div>
+
+        <label for="objectifs_input"></label>
+        <input id="objectifs_input" type="text" placeholder="Type an idea here">
+        <button id="objectifs_button">Add/Save</button>
+        <button id="objectifs_reset">Reset</button>
+        <br>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Membrane. Tous droits réservés.</p>
+    </div>
+</footer>
+
+    <script src="objectif.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

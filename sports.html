@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Membrane - Sports</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo">Membrane</h1>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Quick Taps</a></li>
+                <li><a href="sports.html" class="active">Sports</a></li>
+                <li><a href="objectifs.html">Objectifs</a></li>
+                <li><a href="Project_Manager.html">Projets</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h3>Sports</h3>
+        <h4 id="dateEcheance_sport">Date d'échéance</h4>
+        <div class="scrollBar">
+            <ul id="sports_list"></ul>
+        </div>
+
+        <label for="sports_input"></label>
+        <input id="sports_input" type="text" placeholder="Type an idea here">
+        <button id="sports_button">Add/Save</button>
+        <button id="sports_reset">Reset</button>
+        <br>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Membrane. Tous droits réservés.</p>
+    </div>
+</footer>
+
+    <script src="sport.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

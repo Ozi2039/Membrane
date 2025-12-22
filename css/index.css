@@ -1,0 +1,601 @@
+:root {
+    --primary-bg-color: #1a1a2e; /* Dark background */
+    --secondary-bg-color: #16213e; /* Slightly lighter dark for cards/sections */
+    --text-color: #e0e0e0; /* Light gray text */
+    --accent-color: #0f3460; /* A blue accent */
+    --highlight-color: #e94560; /* A reddish highlight for interactive elements */
+    --border-color: #0f3460; /* Border color for subtle separation */
+    --font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* General container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Mobile first approach - default styles for small screens */
+/* Larger screens styles will go into media queries later */
+
+header {
+    background-color: var(--secondary-bg-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display nav items in a row by default */
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+/* Mobile navigation toggle (hamburger icon) */
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* State for when menu is open */
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Main Content Styling */
+main {
+    padding: 2rem 0;
+}
+
+main .container {
+    padding: 1rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-grow: 1; /* Allow logo to take up available space */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger icon on small screens */
+    }
+
+    nav {
+        order: 3; /* Push nav below logo and toggle */
+        width: 100%;
+        display: none; /* Hide nav by default on small screens */
+        flex-direction: column;
+        background-color: var(--secondary-bg-color);
+        position: absolute; /* Position relative to viewport */
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    nav.open {
+        display: flex; /* Show nav when open */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        padding: 0.8rem 0;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    main .container {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Main Content Styling - Enhanced */
+
+main {
+
+    padding: 2.5rem 0; /* Slightly more vertical padding */
+
+}
+
+
+
+main .container {
+
+    padding: 1.5rem; /* Increased padding */
+
+    background-color: var(--secondary-bg-color);
+
+    border-radius: 10px; /* Slightly more rounded corners */
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+
+    margin-bottom: 2rem; /* Spacing before footer if content is short */
+
+}
+
+
+
+/* Footer Styling - No Change Needed */
+
+
+
+/* Media Queries - No Change Needed */
+
+
+
+/* Specific component styles - Enhanced */
+
+
+
+/* Input and Textarea - Refined */
+
+input[type="text"],
+
+input[type="number"],
+
+textarea {
+
+    width: calc(100% - 22px); /* Adjust width for padding and border */
+
+    padding: 12px; /* Slightly more padding */
+
+    margin-bottom: 12px; /* Slightly more margin */
+
+    border: 1px solid var(--accent-color); /* Use accent color for border */
+
+    background-color: var(--primary-bg-color);
+
+    color: var(--text-color);
+
+    border-radius: 6px; /* Slightly more rounded */
+
+    box-sizing: border-box;
+
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+input[type="text"]:focus,
+
+input[type="number"]:focus,
+
+textarea:focus {
+
+    outline: none;
+
+    border-color: var(--highlight-color);
+
+    box-shadow: 0 0 8px rgba(233, 69, 96, 0.6); /* More prominent glow */
+
+}
+
+
+
+/* Buttons - Refined */
+
+button {
+
+    background-color: var(--highlight-color);
+
+    color: #fff;
+
+    padding: 12px 20px; /* More padding for a bolder button */
+
+    border: none;
+
+    border-radius: 6px; /* Uniform rounded corners */
+
+    cursor: pointer;
+
+    font-size: 1.05rem; /* Slightly larger font */
+
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+    margin-right: 10px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
+
+}
+
+
+
+button:hover {
+
+    background-color: #c93a52; /* Slightly darker highlight */
+
+    transform: translateY(-3px); /* More pronounced lift */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+button:active {
+
+    transform: translateY(0);
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+/* Scrollbar container - Refined */
+
+.scrollBar {
+
+    max-height: 450px; /* Slightly taller */
+
+    overflow-y: auto;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 8px; /* Consistent rounded corners */
+
+    margin-bottom: 20px;
+
+    background-color: var(--primary-bg-color);
+
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+
+}
+
+
+
+/* Custom Scrollbar Styles (Webkit) */
+
+.scrollBar::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+
+
+.scrollBar::-webkit-scrollbar-track {
+
+    background: var(--primary-bg-color);
+
+    border-radius: 10px;
+
+}
+
+
+
+.scrollBar::-webkit-scrollbar-thumb {
+
+    background: var(--accent-color);
+
+    border-radius: 10px;
+
+    border: 2px solid var(--primary-bg-color);
+
+}
+
+
+
+.scrollBar::-webkit-scrollbar-thumb:hover {
+
+    background: var(--highlight-color);
+
+}
+
+
+
+
+
+/* Lists within scrollBar - Refined (Card-like appearance) */
+
+.scrollBar ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+
+.scrollBar li {
+
+    padding: 15px; /* More padding for card effect */
+
+    background-color: var(--secondary-bg-color); /* Card background */
+
+    border-bottom: 1px solid var(--border-color);
+
+    margin-bottom: 5px; /* Space between cards */
+
+    border-radius: 8px; /* Rounded corners for cards */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle card shadow */
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.scrollBar li:hover {
+
+    background-color: #1f2a48; /* Slightly lighter on hover */
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+.scrollBar li:last-child {
+
+    border-bottom: none;
+
+    margin-bottom: 0;
+
+}
+
+
+
+/* Task specific styling (from quickTaps, sports, objectives, project manager) - Refined */
+
+.task-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 1.2em; /* Slightly larger task title */
+
+    font-weight: 600; /* Bolder */
+
+    color: var(--highlight-color); /* Make task titles stand out more */
+
+}
+
+
+
+.task-header strong {
+
+    color: var(--highlight-color);
+
+    margin-right: auto;
+
+}
+
+
+
+.task-header span {
+
+    font-size: 1em; /* Icons slightly larger */
+
+    margin-left: 15px; /* More space */
+
+    color: var(--accent-color); /* Use accent for icons initially */
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+
+}
+
+
+
+.task-header span:hover {
+
+    color: var(--text-color); /* Text color on hover for icons */
+
+}
+
+
+
+.task-header input[type="number"] {
+
+    width: 70px; /* Wider order input */
+
+    padding: 6px;
+
+    text-align: center;
+
+    background-color: var(--primary-bg-color); /* Darker background for consistency */
+
+    border-color: var(--border-color);
+
+    color: var(--text-color);
+
+    margin-left: 15px;
+
+    border-radius: 4px;
+
+}
+
+
+
+.task-desc {
+
+    font-size: 0.95em; /* Slightly larger description font */
+
+    color: #a0a0a0; /* More balanced gray */
+
+    margin-top: 5px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* Placeholder styles - No Change Needed */
+
+
+
+/* Active navigation link styling - No Change Needed */
+
+nav ul li a.active {
+
+    color: var(--highlight-color);
+
+    font-weight: bold;
+
+    border-bottom: 2px solid var(--highlight-color); /* Add an underline for active state */
+
+    padding-bottom: 3px;
+
+}
+
+
+
+/* Add a hover effect for general links in the header as well */
+
+nav ul li a:hover {
+
+    color: var(--highlight-color);
+
+    text-decoration: none;
+
+    border-bottom: 2px solid var(--highlight-color);
+
+    padding-bottom: 3px;
+
+}
