@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Membrane - Sports</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Membrane</h1>
+
+    <div class="tabs">
+        <a href="index.html" class="tab-btn">Quick Taps</a>
+        <a href="sports.html" class="tab-btn active">Sports</a>
+        <a href="objectifs.html" class="tab-btn">Objectifs</a>
+        <a href="Project_Manager.html" class="tab-btn">Project Manager</a>
+    </div>
+
+    <div class="card">
+        <h2>Sports</h2>
+        <div class="muted" id="dateEcheance_sport">Date d'échéance</div>
+        <div class="scroll-box">
+            <ul id="sports_list"></ul>
+        </div>
+
+        <div class="form-grid">
+            <input id="sports_input" type="text" placeholder="Type an idea here">
+            <div class="grid cols-2">
+                <button id="sports_button" class="btn">Add/Save</button>
+                <button id="sports_reset" class="btn ghost">Reset</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<script src="sport.js"></script>
+
+</body>
+</html>
