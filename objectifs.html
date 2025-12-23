@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Membrane - Objectifs</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Membrane</h1>
+
+    <div class="tabs">
+        <a href="index.html" class="tab-btn">Quick Taps</a>
+        <a href="sports.html" class="tab-btn">Sports</a>
+        <a href="objectifs.html" class="tab-btn active">Objectifs</a>
+        <a href="Project_Manager.html" class="tab-btn">Project Manager</a>
+    </div>
+
+    <div class="card">
+        <h2>Objectifs</h2>
+        <div class="muted" id="dateEcheance_objectif">Date d'échéance</div>
+        <div class="scroll-box">
+            <ul id="objectifs_list"></ul>
+        </div>
+
+        <div class="form-grid">
+            <input id="objectifs_input" type="text" placeholder="Type an idea here">
+            <div class="grid cols-2">
+                <button id="objectifs_button" class="btn">Add/Save</button>
+                <button id="objectifs_reset" class="btn ghost">Reset</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<script src="objectif.js"></script>
+
+</body>
+</html>
