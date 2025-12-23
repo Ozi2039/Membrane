@@ -232,3 +232,129 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* ---------- Mobile responsiveness ---------- */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  /* Grids collapse to single column */
+  .grid.cols-2,
+  .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tabs become scrollable horizontally */
+  .tabs {
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 4px;
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Buttons more compact */
+  .btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .btn.ghost {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  /* Checkbox group stacks better */
+  .checkbox-group {
+    gap: 8px;
+  }
+
+  .checkbox-label {
+    font-size: 13px;
+  }
+
+  /* Inputs */
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  textarea {
+    height: 90px;
+  }
+
+  /* Scroll box shorter on mobile */
+  .scroll-box {
+    max-height: 220px;
+    padding-right: 6px;
+  }
+
+  /* List items more touch-friendly */
+  .scroll-box li {
+    padding: 10px 0;
+  }
+
+  .delete-btn {
+    padding: 6px;
+    font-size: 16px;
+  }
+
+  /* Table becomes horizontally scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .actions-cell {
+    text-align: right;
+  }
+
+  .footer-note {
+    font-size: 12px;
+  }
+}
+
+/* Extra small devices (very small phones) */
+@media (max-width: 420px) {
+  body {
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 17px;
+  }
+}
