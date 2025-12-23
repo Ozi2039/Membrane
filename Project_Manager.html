@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Membrane - Project Manager</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="container">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <button id="signInButton" class="btn" style="flex-grow: 1; margin-right: 10px;">Sign in with Google</button>
+        <button id="signOutButton" class="btn ghost" style="display: none;">Sign Out</button>
+    </div>
+    <div id="userDisplay" style="text-align: center; margin-bottom: 10px; color: var(--muted);"></div>
+    <h1>Membrane</h1>
+
+    <div class="tabs">
+        <a href="index.html" class="tab-btn">Quick Taps</a>
+        <a href="sports.html" class="tab-btn">Sports</a>
+        <a href="objectifs.html" class="tab-btn">Objectifs</a>
+        <a href="Project_Manager.html" class="tab-btn active">Project Manager</a>
+    </div>
+
+    <div class="card">
+        <h2>Project Manager</h2>
+
+        <div class="scroll-box">
+            <ul id="projectManager_list"></ul>
+        </div>
+
+        <div class="form-grid">
+            <input id="projectManager_input" type="text" placeholder="Task title">
+            <textarea id="projectManager_description" placeholder="Task description"></textarea>
+            <button id="projectManager_button" class="btn">Add/Save</button>
+        </div>
+    </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="firebase-config.js"></script>
+<script src="auth.js"></script>
+<script src="project_manager.js"></script>
+
+</body>
+</html>
