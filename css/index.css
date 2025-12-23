@@ -187,6 +187,7 @@ textarea {
     padding-right: 10px;
     margin-bottom: 12px;
     flex-grow: 1;
+    min-height: 0;
 }
 
 /* Custom scrollbar for webkit browsers */
