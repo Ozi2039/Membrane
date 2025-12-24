@@ -248,10 +248,6 @@ textarea {
   background: rgba(255,255,255,0.2);
 }
 
-.scroll-box::-webkit-scrollbar-thumb:active {
-  background: rgba(255,255,255,0.25); /* Slightly darker for active state */
-}
-
 .scroll-box ul {
     list-style: none;
     padding: 0;
@@ -304,5 +300,4 @@ input[type="number"] {
         font-size: 12px;
     }
 }
-
 
