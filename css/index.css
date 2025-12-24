@@ -239,17 +239,13 @@ textarea {
   border-radius: 4px;
 }
 
-.scroll-box::-webkit-scrollbar-thumb {
+.scroll-box::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.1);
   border-radius: 4px;
 }
 
-.scroll-box::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.2);
-}
-
 .scroll-box::-webkit-scrollbar-thumb:active {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.2);
 }
 
 .scroll-box ul {
@@ -304,3 +300,4 @@ input[type="number"] {
         font-size: 12px;
     }
 }
+
